@@ -6,6 +6,11 @@ using TMPro;
 public class CubeController : MonoBehaviour
 {
     public TMP_Text scoreText;
+    public int visible_number = 21;
+    private int invisible_count = 0;
+    private int current_number = 0;
+    public int score = 0;
+    public Vector3 position;
     //DECLARE VARIABLES HERE
     
 
@@ -20,12 +25,16 @@ public class CubeController : MonoBehaviour
     {
         //INCREMENT AND PRINT CURRENTNUM HERE 
 
-        //Uncomment the code below and complete 
-        //the if statement to check if Mouse0 is clicked 
-        // if ()
-        // {
-        //     score++;
-        //     scoreText.text = "Score: " + score.ToString();
-        // }
+        //uncomment the code below and complete 
+        //the if statement to check if mouse0 is clicked 
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            score++;
+            scoreText.text = "score: " + score.ToString();
+        }
+    }
+    void FixedUpdate()
+    {
+        
     }
 }

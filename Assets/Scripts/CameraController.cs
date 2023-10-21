@@ -14,7 +14,7 @@ public class CameraController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         //continuously follow the ball at a constant distance
         this.transform.position = player.transform.position + distance;

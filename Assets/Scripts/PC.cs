@@ -18,7 +18,7 @@ public class PC : MonoBehaviour
         float horizontalMove = Input.GetAxis("Horizontal");
         float verticalMove = Input.GetAxis("Vertical");
 
-        rb.AddForce(new Vector3(horizontalMove * speed, 0, verticalMove * speed));
+        rb.AddForce(new Vector3(horizontalMove * speed * Time.deltaTime, 0, verticalMove * speed * Time.deltaTime));
         
     }
 }

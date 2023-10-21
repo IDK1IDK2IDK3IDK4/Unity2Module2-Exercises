@@ -41,10 +41,16 @@ public class PlayerController : MonoBehaviour
     }
 
     //Create OnCollisionExit function below
-
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Floor") 
+        {
+            RestartLevel();
+        }
+    }
 
     //Create OnCollisionStay function below 
-    
+
 
     //END OF CODE
 
